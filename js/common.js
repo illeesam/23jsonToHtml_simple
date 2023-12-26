@@ -10,7 +10,7 @@ function createTable(jsonObj) {
     }
 }
 
-// 테이블 생성 함수
+// arrray table생성
 function _make_array(jsonObj) {
     var _table = document.createElement("table");
     _table.setAttribute("class", "arr_table");
@@ -55,7 +55,7 @@ function _make_array(jsonObj) {
     return _table;
 }
 
-// 테이블 생성 함수
+// object table생성
 function _make_object(jsonObj) {
     var _table = document.createElement("table");
     _table.setAttribute("class", "obj_table");
@@ -85,7 +85,7 @@ function _make_object(jsonObj) {
     return _table;
 }
 
-// 테이블 생성 함수
+// 값 생성
 function _make_value(value) {
     return document.createTextNode(JSON.stringify(value));
 }
