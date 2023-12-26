@@ -1,0 +1,37 @@
+.basetitle {
+    border: 1px solid rgb(72, 94, 155);
+    background-color: rgb(174, 255, 164);
+}
+/* arr_table | arr_thead | arr_htr | arr_hth | arr_tbody | arr_tr | arr_td */
+.arr_table {
+    border: 1px solid rgb(72, 94, 155);
+    border-collapse: collapse;
+}
+.arr_htr {
+    border: 1px solid rgb(72, 94, 155);
+    border: 1px solid rgb(72, 94, 155);
+}
+.arr_hth {
+    border: 1px solid rgb(72, 94, 155);
+    background-color: rgb(183, 192, 182);
+}
+.arr_tr {
+    border: 1px solid rgb(72, 94, 155);
+}
+.arr_td {
+    border: 1px solid rgb(72, 94, 155);
+}
+/* obj_table | obj_tbody | obj_tr | obj_td1 | obj_td2 */
+.obj_table {
+    border: 1px solid rgb(111, 126, 167);
+    border-collapse: collapse;
+}
+.obj_tr {
+    border: 1px solid rgb(72, 94, 155);
+}
+.obj_td1 {
+    background-color: rgb(240, 237, 231);
+}
+.obj_td2 {
+    border: 1px solid rgb(157, 161, 146);
+}
