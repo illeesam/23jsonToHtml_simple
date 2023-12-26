@@ -1,5 +1,5 @@
-# 23jsonToHtmlLite
-23jsonToHtmlLite
+# 23jsonToHtml_simple
+23jsonToHtml_simple
 
 
-run) vscode > live server > index.html 
+run) vscode ▶ index.html (Open with Live Server)
