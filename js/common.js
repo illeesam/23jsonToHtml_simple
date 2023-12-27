@@ -37,12 +37,11 @@ function _make_array(jsonObj) {
             var _td = document.createElement("td");
             _td.setAttribute("class", "arr_td");
             if (Array.isArray(jsonObj[i][key])) { // 배열
-                // 3단계까지만 처리
-                if (jsonObj[i][key].length > 0 && typeof jsonObj[i][key][0] === 'object') { // 오브젝트
-                    var innerTable = _make_object(jsonObj[i][key]); // 3단계 배열인 경우 처리
+                if (jsonObj[i][key].length > 0 && typeof jsonObj[i][key][0] === 'object') {
+                    var innerTable = _make_object(jsonObj[i][key]);
                     _td.appendChild(innerTable);
-                } else { // 일반
-                    _td.appendChild(_make_value(jsonObj[i][key])); // 2단계 배열인 경우 문자열로 변환
+                } else {
+                    _td.appendChild(_make_value(jsonObj[i][key]));
                 }
             } else { // 일반값인 경우
                 _td.appendChild(document.createTextNode(jsonObj[i][key]));
