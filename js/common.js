@@ -30,26 +30,30 @@ function _make_array(jsonObj) {
 
     var _tbody = document.createElement("tbody"); // 바디 생성
     _tbody.setAttribute("class", "arr_tbody");
-    for (var i = 0; i < jsonObj.length; i++) {
-        var _tr = document.createElement("tr");
+        
+      for (let i = 0; i < jsonObj.length; i++) {
+        let _tr = document.createElement("tr");
         _tr.setAttribute("class", "arr_tr");
-        for (var key in jsonObj[i]) {
-            var _td = document.createElement("td");
-            _td.setAttribute("class", "arr_td");
-            if (Array.isArray(jsonObj[i][key])) { // 배열
-                if (jsonObj[i][key].length > 0 && typeof jsonObj[i][key][0] === 'object') {
-                    var innerTable = _make_object(jsonObj[i][key]);
-                    _td.appendChild(innerTable);
-                } else {
-                    _td.appendChild(_make_value(jsonObj[i][key]));
-                }
-            } else { // 일반값인 경우
-                _td.appendChild(document.createTextNode(jsonObj[i][key]));
-            }
-            _tr.appendChild(_td);
+        let _tdx = document.createElement("td");
+        _tdx.setAttribute("class", "arr_tdx");
+        _tdx.appendChild(_out_value("", "" + (i + 1) + "/" + jsonObj.length)); // 일반값인 경우
+        _tr.appendChild(_tdx);
+        for (let key in jsonObj[i]) {
+          let _td = document.createElement("td");
+          _td.setAttribute("class", "arr_td");
+          let value = jsonObj[i][key];
+          if (value instanceof Array) {
+            _td.appendChild(_make_array(value));
+          } else if (value instanceof Object) {
+            _td.appendChild(_make_object(value));
+          } else {
+            _td.appendChild(_out_value(key, value)); // 일반값인 경우
+          }
+          _tr.appendChild(_td);
         }
         _tbody.appendChild(_tr);
-    }
+      }
+    
     _table.appendChild(_tbody);
     return _table;
 }
@@ -60,6 +64,7 @@ function _make_object(jsonObj) {
     _table.setAttribute("class", "obj_table");
     var _tbody = document.createElement("tbody"); // 바디 생성
     _tbody.setAttribute("class", "obj_tbody");
+    
     for(let key in jsonObj) {
         let value = jsonObj[key];
         var _tr = document.createElement("tr");
@@ -80,6 +85,7 @@ function _make_object(jsonObj) {
         _tr.appendChild(_td2);
         _tbody.appendChild(_tr);
     }
+    
     _table.appendChild(_tbody);
     return _table;
 }
