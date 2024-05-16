@@ -1,0 +1,45 @@
+{
+    "vetur.validation.template": false,
+    "vetur.format.defaultFormatter.html": "none",
+    // Set the default
+    "editor.formatOnSave": true,
+    // Enable per-language
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[vue]": {
+        "editor.formatOnSave": true
+    },
+    "[php]": {
+        "editor.formatOnSave": true
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "workbench.colorCustomizations": {
+        // 상단 타이틀바 배경색
+        "titleBar.activeBackground": "#883ccf",
+        "titleBar.inactiveBackground": "#883ccf",
+        "window.activeBorder": "#06798d",
+        // 윈도우 테두리 보더칼라
+        "tab.activeBorder": "#12EAFF",
+        "tab.activeModifiedBorder": "#ff0000",
+        "tab.border": "#bb7b7b",
+        "sideBar.background": "#232323",
+        "editor.background": "#000000",
+        "scrollbarSlider.background": "#A6A6A6",
+        "minimap.background": "#313030",
+        "sideBarSectionHeader.border": "#B7B7B7",
+        "sideBarSectionHeader.background": "#474747",
+        "editor.lineHighlightBorder": "#8C8C8C",
+        "terminal.background": "#02022b",
+        "titleBar.activeForeground": "#ffffff",
+        "titleBar.inactiveForeground": "#ffffff"
+    },
+    "i18n-ally.localesPaths": [
+        "src/views/cms/components/messages"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true,
+    "liveServer.settings.port": 8080,
+    // "liveServer.settings.root": "/src",
+}
